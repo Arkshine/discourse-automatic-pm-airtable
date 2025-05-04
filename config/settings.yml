@@ -1,4 +1,8 @@
-TODO_plugin_name:
-  plugin_name_enabled:
-    default: false
+automatic_pm_airtable:
+  automatic_pm_airtable_enabled:
+    default: true
+    client: true
+  automatic_pm_airtable_sender:
+    default: system
+    type: username
     client: true

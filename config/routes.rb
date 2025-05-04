@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-MyPluginModule::Engine.routes.draw do
-  get "/examples" => "examples#index"
-  # define routes here
+AutomaticPmAirtable::Engine.routes.draw do
+  post "/webhook" => "airtable_callback#webhook"
 end
 
-Discourse::Application.routes.draw { mount ::MyPluginModule::Engine, at: "my-plugin" }
+Discourse::Application.routes.draw { mount ::AutomaticPmAirtable::Engine, at: "/airtable" }
